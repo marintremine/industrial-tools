@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "template_partials",
     "django_htmx",
     "apps.core",
+    "apps.table",
 ]
 
 MIDDLEWARE = [
