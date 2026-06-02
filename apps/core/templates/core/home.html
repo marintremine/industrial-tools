@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}outils industriels{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="min-h-[70vh] flex items-center justify-center px-6">
+    <div class="max-w-2xl text-center">
+        <h1 class="text-5xl font-bold mb-4">
+            Des outils pensés pour <span class="text-primary">l'industrie.</span>
+        </h1>
+        <p class="text-lg text-base-content/60 mb-8">
+            Applications génériques pour les environnements de production —
+            tableaux de données, formulaires dynamiques, et plus.
+        </p>
+        <a href="/projects/" class="btn btn-primary btn-lg">
+            Voir les projets
+        </a>
+    </div>
+</section>
+
+
+<!-- Outils -->
+<section class="max-w-3xl mx-auto px-6 pb-24">
+    <h2 class="text-sm font-semibold uppercase tracking-widest text-base-content/40 mb-6 text-center">
+        Outils disponibles
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+        <a href="https://table.marint.me" class="card bg-base-200 hover:bg-base-300 transition-colors">
+            <div class="card-body items-center text-center p-6 gap-3">
+                <i data-lucide="table" class="w-7 h-7 text-primary"></i>
+                <h3 class="font-semibold">Table</h3>
+                <p class="text-xs text-base-content/50">Base de données visuelle</p>
+            </div>
+        </a>
+
+        <div class="card bg-base-200 opacity-40 cursor-not-allowed">
+            <div class="card-body items-center text-center p-6 gap-3">
+                <i data-lucide="file-text" class="w-7 h-7"></i>
+                <h3 class="font-semibold">Form</h3>
+                <p class="text-xs text-base-content/50">Bientôt disponible</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

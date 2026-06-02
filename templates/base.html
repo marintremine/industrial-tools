@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Outils industriels{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons())</script>
+</head>
+<body class="min-h-screen bg-base-100 text-base-content">
+
+    {% include "cotton/navbar.html" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "cotton/footer.html" %}
+
+</body>
+</html>

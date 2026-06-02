@@ -1,0 +1,27 @@
+<nav class="navbar bg-base-100 border-b border-base-200 px-6">
+    <div class="navbar-start">
+        <a href="/" class="text-lg font-bold tracking-tight">Outils industriels</a>
+    </div>
+    <div class="navbar-end gap-2">
+        <a href="/projects/" class="btn btn-ghost btn-sm">Projets</a>
+        <label class="swap swap-rotate btn btn-ghost btn-circle btn-sm">
+            <input type="checkbox" onchange="
+                const theme = this.checked ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+            "/>
+            <i data-lucide="sun" class="swap-off w-4 h-4"></i>
+            <i data-lucide="moon" class="swap-on w-4 h-4"></i>
+        </label>
+    </div>
+</nav>
+
+<script>
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        if (saved === 'dark') {
+            document.querySelector('.swap input').checked = true;
+        }
+    }
+</script>
