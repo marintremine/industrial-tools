@@ -14,9 +14,18 @@ class Command(BaseCommand):
                 TD_TypeData(TD_code="tag"),
             ])
 
-            table = DYT_DynamicTable.objects.create(
-                DYT_name="Personnes",
-                DYT_description="Tableau des personnes de la classe"
+            DYT_DynamicTable.objects.create(
+                DYT_name="PersonnesBlois",
+                DYT_description="Tableau des personnes de Blois",)
+
+            DYT_DynamicTable.objects.create(
+                DYT_name="PersonnesBourges",
+                DYT_description="Tableau des personnes de Bourges"
             )
+
+            DYT_DynamicTable.objects.create(
+                DYT_name="PersonnesParis",
+                DYT_description="Tableau des personnes de Paris",)
+
         except Exception as e:
             self.stdout.write(self.style.ERROR(f'Erreur lors de l\'insertions des données : {e}'))
