@@ -54,6 +54,7 @@ pnpm-debug.log*
 .npm/
 .pnpm-store/
 coverage/
+static/css/output.css
 
 # Front-end build outputs
 dist/
@@ -72,3 +73,4 @@ dist/
 *~
 .DS_Store
 Thumbs.db
+
