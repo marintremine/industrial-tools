@@ -8,7 +8,6 @@ class DYT_DynamicTable(models.Model):
     DYT_name = models.CharField(max_length=30)
     DYT_description = models.CharField(max_length=30)
 
-    pass
 
 class COL_Column(models.Model):
     COL_id = models.AutoField(primary_key=True)
