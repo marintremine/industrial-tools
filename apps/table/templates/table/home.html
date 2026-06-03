@@ -3,5 +3,34 @@
 
 {% block content %}
     <h1>COUCOU LA TABLE</h1>
+    {% for table in tables %}
+    	<p>{{ table.DYT_name }}</p>
+    {% endfor %}
+
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">+</button>
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Un nouveau tableau a été créé</p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <form>
+                        <input type="text" class="input validator" required placeholder="NomTableau"
+                               pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+                        <p class="validator-hint">
+                            Must be 3 to 30 characters
+                            <br/>containing only letters, numbers or dash
+                        </p>
+                    </form>
+                    <button class="btn-primary">Crééer</button>
+                    <button class="btn-secondary">Annuler</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
 
 {% endblock %}
